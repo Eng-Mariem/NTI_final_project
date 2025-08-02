@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg shadow border m-1">
+            <div class="text-center">
+                <h2>About Me</h2>
+                <img src="assets/Image.png" alt="Profile picture" width="256" height="256" class="rounded-circle border border-3 border-white">
+                <p>Hello! I'm Mariam Abdelrahman, a passionate software engineer with a strong foundation in web development, data structures, and problem-solving.
+
+I enjoy building responsive, user-friendly applications and have hands-on experience with modern front-end and back-end technologies. I thrive in collaborative environments and love turning ideas into real, working software.
+
+I’m always eager to learn new technologies and improve my skills, and I'm excited about contributing to impactful projects that make a difference.
+
+</p>
+            </div>
+        </div>
+                <div class="col-lg shadow border m-1">
+                    <div class="text-center">
+  <h2>Featured Project</h2>
+  <h4 class="mt-3">{{ featuredproject.name }}</h4>
+
+
+  <div *ngIf="featuredproject.pictures" class="my-4">
+    <carousel
+      [itemsPerSlide]="1"
+      [singleSlideOffset]="true"
+      [showIndicators]="true"
+      [noPause]="true"
+    >
+      <ng-container *ngFor="let pic of featuredproject.pictures">
+        <slide>
+          <img
+            [src]="pic"
+            alt="Project image"
+            class="img-fluid rounded shadow"
+            style="max-height: 350px;"
+          />
+        </slide>
+      </ng-container>
+    </carousel>
+  </div>
+    <p class="text-muted">{{ featuredproject.summary }}</p>
+<p>Vist The portfolio Section To Learn More !</p>
+</div>
+
+                </div>
+ 
+    </div>
+</div>

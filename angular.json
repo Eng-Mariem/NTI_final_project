@@ -16,11 +16,10 @@
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
+  "src/assets",
+  "src/favicon.ico"
+],
+            
             "styles": [
               "src/styles.css"
             ],
@@ -79,12 +78,18 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.css"
-            ]
+  "styles": [
+  "node_modules/bootstrap/dist/css/bootstrap.min.css",
+  "src/styles.css"
+]
+
+
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

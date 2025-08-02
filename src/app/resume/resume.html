@@ -1,0 +1,76 @@
+<div class="container mt-4">
+  <div class="text-center mb-4">
+  <button class="btn custom-resume-btn" (click)="downloadPDF()">Download PDF Resume</button>
+</div>
+
+
+  <div class="accordion" id="resumeAccordion">
+    <div class="accordion-item" *ngFor="let section of sections; let i = index">
+      <h2 class="accordion-header" id="heading{{i}}">
+        <button class="accordion-button" type="button"
+                [class.collapsed]="activeIndex !== i"
+                (click)="toggleSection(i)">
+          {{ section.title }}
+        </button>
+      </h2>
+
+      <div [id]="'collapse' + i"
+           class="accordion-collapse collapse"
+           [class.show]="activeIndex === i">
+        <div class="accordion-body">
+          <div [ngSwitch]="section.title">
+
+            <ng-container *ngSwitchCase="'Work Experience'">
+              <p>Developer at XYZ Corp, 2021–2023</p>
+            </ng-container>
+
+            <ng-container *ngSwitchCase="'Education'">
+              <p>BSc in Computer Science, ABC University</p>
+            </ng-container>
+
+            <ng-container *ngSwitchCase="'Certifications'">
+              <ul>
+                <li>Angular Certification</li>
+                <li>Node.js Professional</li>
+              </ul>
+            </ng-container>
+
+            <ng-container *ngSwitchCase="'Skills'">
+              <div class="row">
+                <div class="col-md-4">
+                  <h5>Programming Languages:</h5>
+                  <ul>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>TypeScript</li>
+                  </ul>
+                </div>
+                <div class="col-md-4">
+                  <h5>Frameworks:</h5>
+                  <ul>
+                    <li>Angular</li>
+                    <li>React</li>
+                    <li>ASP.NET</li>
+                  </ul>
+                </div>
+                <div class="col-md-4">
+                  <h5>Other Skills:</h5>
+                  <ul>
+                    <li>Git</li>
+                    <li>MVC Architecture</li>
+                    <li>Agile Development</li>
+                  </ul>
+                </div>
+              </div>
+            </ng-container>
+
+            <ng-container *ngSwitchDefault>
+              <p>Section not found.</p>
+            </ng-container>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

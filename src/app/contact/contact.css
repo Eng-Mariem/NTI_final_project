@@ -1,0 +1,84 @@
+.contact-container {
+  max-width: 420px;
+  margin: 60px auto;
+  padding: 30px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-family: 'Poppins', sans-serif;
+  color: #1a1a1a;
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #222;
+}
+
+.message {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 25px;
+  font-style: italic;
+}
+
+p {
+  margin: 16px 0;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+i {
+  font-size: 18px;
+  color: #444;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  padding: 8px;
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+i:hover {
+  background-color: #c0c0c0;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #004a99;
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .contact-container {
+    margin: 30px 15px;
+    padding: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  i {
+    font-size: 16px;
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+  }
+}
